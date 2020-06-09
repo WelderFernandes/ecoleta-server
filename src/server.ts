@@ -3,7 +3,7 @@ import express from 'express';
 const app = express();
 
 
-app.get('/users', () => {
+app.get('/users', (request, response) => {
     console.log('usuario Listado');
 })
 
