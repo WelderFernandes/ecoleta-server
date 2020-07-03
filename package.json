@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "knex:migration": "knex --knexfile knexfile.ts migrate:latest",
     "knex:seed": "knex --knexfile knexfile.ts seed:run ",
-    "dev": "ts-node-dev --ignore-watch node_modules ./src/server.ts"
+    "dev": "ts-node-dev --ignore-watch node_modules ./src/server.ts",
+    "start": "node ./src/server.ts"
+
   },
   "keywords": [],
   "author": "Welder N. Fernandes <Welderx3@gmail.com>",
