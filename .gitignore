@@ -117,3 +117,4 @@ dist
 
 uploads/*
 !uploads/.gitkeep
+src/database/database.sqlite
