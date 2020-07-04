@@ -11,5 +11,15 @@ app.use(routes)
 
 app.use('/uploads', express.static(path.resolve(__dirname,'..','uploads')))
 
+if( process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'))
+
+    const path = require('path')
+    app.get('*', function (req,res) {
+        res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+    })
+}
+
 app.use(errors());
-app.listen(process.env.PORT || 3333) 
+const PORT = process.env.PORT || 8000;
+app.listen(PORT) 
