@@ -1,1 +1,1 @@
-web: knex migrate:rollback && knex migrate:latest && knex seed:run && node ./src/server.ts
+web: npm run knex:rollback && npm run knex:migration && npm run knex:seed && npm run dev
